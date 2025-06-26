@@ -1,10 +1,9 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import Login from "./components/Auth/Login";
+import SignUp from "./components/Auth/SignUp";
 import Home from "./pages/Home";
-import LandingPage from "./pages/LandingPage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import EditorPage from "./pages/EditorPage";
 import Alert from "./components/Alert";
@@ -12,6 +11,9 @@ import { useState } from "react";
 import UserState from "./context/UserState";
 import ShopState from "./context/ShopState";
 import EditorState from "./context/EditorState";
+import DashboardLayout from "./pages/Dashboard";
+import Sidebar from "./components/SideBar";
+import { Navbar } from "@material-tailwind/react";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -40,8 +42,8 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/landingpage" element={<LandingPage />} />
                 <Route path="/editor" element={<EditorPage />} />
+                <Route path="/dashboard/*" element={<DashboardLayout/>} />
               </Routes>
             </GoogleOAuthProvider>
           </ShopState>

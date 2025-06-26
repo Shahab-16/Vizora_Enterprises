@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
-import { ClosedEye, Google, OpenEye } from "../assets/icons";
+import { ClosedEye, Google, OpenEye } from "../../assets/icons";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import page_break from "../assets/images/page_break.png";
+import page_break from "../../assets/images/page_break.png";
 import { Link } from "react-router-dom";
-import UserContext from "../context/userContext";
+import UserContext from "../../context/userContext";
 import { motion } from "framer-motion";
-import working_girl from "../assets/images/working_girl.png";
-import { images } from "../assets/asset";
+import working_girl from "../../assets/images/working_girl.png";
+import { images } from "../../assets/asset";
 
 const SignUp = () => {
   const { signup, googleSignin } = useContext(UserContext);

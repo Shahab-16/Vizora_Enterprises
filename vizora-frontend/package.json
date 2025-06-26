@@ -38,6 +38,7 @@
     "react-material-ui-carousel": "^3.4.2",
     "react-router-dom": "^6.23.1",
     "react-three-fiber": "^6.0.13",
+    "react-toastify": "^11.0.5",
     "three": "^0.167.0",
     "three-viewport-gizmo": "^0.1.5",
     "uuid": "^10.0.0",

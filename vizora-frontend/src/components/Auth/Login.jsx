@@ -1,13 +1,13 @@
   import React, { useState, useEffect, useContext } from "react";
-  import { long_logo, ClosedEye, Google, OpenEye } from "../assets/icons";
+  import { long_logo, ClosedEye, Google, OpenEye } from "../../assets/icons";
   import { Formik, Form, Field } from "formik";
   import * as Yup from "yup";
-  import page_break from "../assets/images/page_break.png";
-  import working_girl from "../assets/images/working_girl.png";
+  import page_break from "../../assets/images/page_break.png";
+  import working_girl from "../../assets/images/working_girl.png";
   import { Link } from "react-router-dom";
-  import UserContext from "../context/userContext";
+  import UserContext from "../../context/userContext";
   import { motion } from "framer-motion";
-  import { images } from "../assets/asset";
+  import { images } from "../../assets/asset";
   const Login = () => {
     const { login, googleSignin } = useContext(UserContext);
     const [showBackground, setShowBackground] = useState(window.innerWidth > 1140);
