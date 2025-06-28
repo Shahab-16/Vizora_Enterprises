@@ -34,10 +34,16 @@ function App() {
         <Alert alert={alert} closeAlert={closeAlert} />
       {/* <div className="flex flex-1">
       <SideBar/>
-
       </div> */}
+      <div className=" flex w-full">
+
+      <div className=" flex w-[20%] bg-black">
+        <SideBar />
+      </div>
+      <div className="w-[80%]">
         <Routes>
           <Route path="/" element={<AdminHome />} />
+          <Route path="admin/dashboard" element={<Dashboard/>} />
           <Route path="login" element={<AdminLogin />} />
           <Route path="signup" element={<AdminSignup />} />
           <Route path="editor" element={<EditorPage />} />
@@ -46,6 +52,9 @@ function App() {
           <Route path="/admin/product-info" element={<ProductInfo/>}/>
           <Route path="/admin/dashboard" element={<Dashboard/>}/>
         </Routes>
+
+      </div>
+      </div>
       </AdminState>
     </Router>
   );

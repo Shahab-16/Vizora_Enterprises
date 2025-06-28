@@ -19,11 +19,11 @@ const AdminHome = () => {
 
   return (
     <div className="grid grid-cols-5">
-      <div className="col-span-1 bg-[#DFE7EB]">
+      {/* <div className="col-span-1 bg-black">
         <SideBar active={active} setActive={setActive} />
-      </div>
+      </div> */}
 
-      <div className="col-span-4 py-10 px-14">
+      <div className="col-span-4 py-10 px-14 c">
         {active === "dashboard" && <Dashboard />}
         {active === "product" && <Product />}
         {active === "design" && <Design />}

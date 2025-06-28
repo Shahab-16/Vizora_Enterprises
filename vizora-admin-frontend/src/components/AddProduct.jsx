@@ -38,10 +38,10 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="h-full-screen w-full bg-gradient-to-r from-blue-100 to-blue-300 min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="h-full-screen w-full bg-[#1e1e2f] min-h-screen flex items-center justify-center overflow-hidden">
       <form
         onSubmit={handleSubmit}
-        className="m-5 w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8"
+        className="m-5 w-full max-w-4xl bg-white text-white rounded-2xl shadow-lg p-8"
       >
         <p className="font-bold text-3xl text-center text-blue-800 mb-6">
           Add New Product
