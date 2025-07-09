@@ -14,6 +14,8 @@ import EditorState from "./context/EditorState";
 import DashboardLayout from "./pages/Dashboard";
 import Sidebar from "./components/SideBar";
 import { Navbar } from "@material-tailwind/react";
+import AdminLogin from "./components/Auth/AdminLogin";
+import UserLogin from "./components/Auth/UserLogin";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -44,6 +46,8 @@ function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/editor" element={<EditorPage />} />
                 <Route path="/dashboard/*" element={<DashboardLayout/>} />
+                <Route path="/login/user" element={<UserLogin/>}/>
+                <Route path="/login/admin" element={<AdminLogin/>}/>
               </Routes>
             </GoogleOAuthProvider>
           </ShopState>

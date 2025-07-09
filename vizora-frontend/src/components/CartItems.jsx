@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 import pendant from "../assets/images/pendant.webp"
 
-const Favourites = ({products,setProducts}) => {
-const cartItems = products.filter(product => product.isFavorite);
+const CartItems = ({ products, setProducts }) => {
+  const cartItems = products.filter(product => product.inCart);
 
-  const removeFromFavourite = (id) => {
+  const removeFromCart = (id) => {
     const updatedProducts = products.map(product =>
-      product.id === id ? { ...product, isFavorite: false } : product
+      product.id === id ? { ...product, inCart: false } : product
     );
     setProducts(updatedProducts);
-  };  
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-3xl font-bold text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-        Favourites
+        My Cart
       </h1>
 
       {cartItems.length === 0 ? (
@@ -24,7 +24,7 @@ const cartItems = products.filter(product => product.isFavorite);
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 className="text-xl font-medium text-gray-300">Your Favourite list is empty</h3>
+          <h3 className="text-xl font-medium text-gray-300">Your cart is empty</h3>
           <p className="text-gray-500">Add some products to get started!</p>
         </div>
       ) : (
@@ -41,10 +41,10 @@ const cartItems = products.filter(product => product.isFavorite);
               <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
               <p className="text-purple-300 font-bold text-lg mb-4">${product.price.toFixed(2)}</p>
               <button
-                onClick={() => removeFromFavourite(product.id)}
+                onClick={() => removeFromCart(product.id)}
                 className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-4 py-2 rounded-lg transition-all shadow hover:shadow-red-500/30 w-full"
               >
-                Remove from Favourite
+                Remove from Cart
               </button>
             </div>
           ))}
@@ -52,6 +52,6 @@ const cartItems = products.filter(product => product.isFavorite);
       )}
     </div>
   );
-}
+};
 
-export default Favourites
+export default CartItems;
